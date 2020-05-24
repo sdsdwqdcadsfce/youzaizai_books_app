@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div>xxxxxxxxxxxxx</div>
-
+<!--    展示路由中组件的内容-->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,15 +9,16 @@
 <script>
   export default {}
   // 设置rem自适应字体
-  document.addEventListener('DOMContentLoaded', () => {
-    const html = document.querySelector('html')
-    let fontSize = window.innerWidth / 10
-    fontSize = fontSize > 50 ? 50 : fontSize
-    html.style.fontSize = fontSize + 'px'
-  })
+
 </script>
-<style scoped>
-  div{
-    font-size: 1rem;
-  }
+
+<style lang="scss" rel="stylesheet/scss" scoped>
+    @import "assets/styles/global";
+    #app {
+        width: 100%;
+        height: 100%;
+        background: #7d8188;
+        overflow: hidden;
+    }
+
 </style>
